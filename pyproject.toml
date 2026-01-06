@@ -1,0 +1,10 @@
+[project]
+name = "gist-server"
+version = "1.0.0"
+description = "A caching proxy for GitHub Gists API"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+asyncio_default_fixture_loop_scope = "function"

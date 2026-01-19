@@ -1,5 +1,4 @@
 # GitHub Gist Server
-
 A simple Flask server that fetches GitHub user gists with caching.
 
 ## Quick Start

@@ -1,0 +1,27 @@
+name: GitHub Actions Demo
+run-name: CI
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
+      - name: setup python env
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12' 
+      - name: test case execution
+        run: | 
+          pip3 install -r requirements.txt  
+          py test_app.py
+
+      - name: Building dockerfile
+        run: |
+          docker build -t gist .
+          docker images
+
+  
+        
+      
+      

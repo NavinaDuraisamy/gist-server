@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gists
+  labels:
+    app: gists
+spec:
+  selector:
+    matchLabels:
+      app: gists
+  template:
+    metadata:
+      labels:
+        app: gists
+    spec:
+      containers:           
+      - name: 
+        image: 
+        ports:
+        - containerPort: 80

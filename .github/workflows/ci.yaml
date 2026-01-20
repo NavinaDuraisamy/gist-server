@@ -20,6 +20,11 @@ jobs:
         run: |
           docker build -t gist .
           docker images
+          docker tag gist navina08/gists-server:latest
+          docker login -u navina08 -p ${{secrets.GIST_DOCKERHUB}}
+          docker push navina08/gists-server:latest
+
+
 
   
         
